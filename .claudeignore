@@ -1,0 +1,61 @@
+# Environment files - contain API keys and secrets
+.env
+.env.*
+!.env.example
+
+# Virtual environment
+.venv/
+venv/
+env/
+ENV/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+
+# Logs
+*.log
+logs/
+
+# IDE settings
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Docker volumes
+postgres_data/
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
+
+# UV lock file (large)
+uv.lock
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+
+# Credentials and keys
+credentials.json
+*.pem
+*.key
+*.cert
+
+# Local configuration
+local_settings.py
+config.local.py
