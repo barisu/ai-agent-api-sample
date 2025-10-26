@@ -1,8 +1,8 @@
 from datetime import datetime
-from typing import Any, Dict, List, Optional
+from typing import Any, Dict, List
 from uuid import UUID
 
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, ConfigDict, Field
 
 
 # Document Schemas
@@ -16,14 +16,13 @@ class DocumentCreate(BaseModel):
 class DocumentResponse(BaseModel):
     """Schema for document response."""
 
+    model_config = ConfigDict(from_attributes=True, populate_by_name=True)
+
     id: UUID
     content: str
-    metadata: Dict[str, Any]
+    metadata: Dict[str, Any] = Field(alias="doc_metadata")
     created_at: datetime
     updated_at: datetime
-
-    class Config:
-        from_attributes = True
 
 
 class DocumentListResponse(BaseModel):

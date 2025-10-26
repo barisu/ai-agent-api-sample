@@ -39,7 +39,7 @@ def create_document(
         # Create document model instance
         db_document = Document(
             content=document.content,
-            metadata=document.metadata,
+            doc_metadata=document.metadata,
         )
 
         db.add(db_document)
